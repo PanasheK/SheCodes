@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking - My hobby👩‍🍳</title>
+    <style>
+        body {
+            background: linear-gradient(68.6deg, rgb(252, 165, 241) 1.8%, rgb(181, 255, 255) 100.5%);
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid plum;
+            font-size: 24px;
+            border-radius: 6px;
+            padding: 10px 20px;
+            transition: all 200ms ease-in-out;
+        }
+
+        button:hover {
+            background: plum;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            transition: all 150ms ease-in-out;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+            color: black;
+        }
+
+        .theme-button {
+            font-size: 10px;
+            background: black;
+            color: white;
+            padding: 5 8px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .theme-button:hover {
+            color: black;
+            background: white;
+        }
+
+        .cooking-intro-picture {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+            border: 1px solid black;
+
+        }
+
+        .cooking-intro-picture:hover {
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
+        }
+
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+            border: 1px solid black;
+
+        }
+
+        .grid img:hover {
+            transform: scale(1.5);
+        }
+
+        .dark {
+            background: linear-gradient(109.6deg, rgb(36, 45, 57) 11.2%, rgb(16, 37, 60) 51.2%, rgb(0, 0, 0) 98.6%);
+            color: white;
+        }
+
+        .dark .container {
+            background: rgba(255, 255, 255, 0.1);
+
+        }
+
+        .dark footer {
+            color: white;
+        }
+
+        .dark a {
+            color: plum;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-button"> Change theme</button>
+    <div class="container">
+        <h1> Cooking 👩‍🍳</h1>
+        <h2> <em>My favourite hobby</em> </h2>
+        <a href="https://en.wikipedia.org/wiki/Cooking" target="_blank">
+            <img src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/951/original/cooking_0.jpeg?1727864345"
+                alt="" class="cooking-intro-picture" />
+        </a>
+        <div class="grid">
+            <img src=" https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/957/original/cooking_last.jpeg?1727864468"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/955/original/Home-cooking.jpg?1727864366 "
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/953/original/cooking.jpg?1727864354"
+                alt="" />
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/145/986/original/cooking_new.jpg?1727886150"
+                alt="" />
+        </div>
+        <p> Cooking, also known as cookery or professionally as the culinary arts, is the art, science and craft of
+            using
+            heat to
+            make food more palatable, digestible, nutritious, or safe. Cooking techniques and ingredients vary widely,
+            from
+            grilling
+            food over an open fire, to using electric stoves, to baking in various types of ovens, reflecting local
+            conditions.
+            Cooking is an aspect of all human societies and a cultural universal.
+            <br />
+            <a href="https://en.wikipedia.org/wiki/Cooking" target="_blank"><strong> 📖Read on wikipedia</strong></a>
+        </p>
+
+        <button class="learnCooking"> Learn Cookery</button>
+    </div>
+    <footer>
+        Coded with ❤️ by Ruth P Kaseke
+    </footer>
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+            body.classList.toggle("dark");
+
+            /* if (body.classList.contains("dark")) {
+                 body.classList.remove("dark");
+             } else {
+                 body.classList.add("dark")
+             }*/
+
+        }
+        let themeButton = document.querySelector(".theme-button");
+        themeButton.addEventListener("click", changeTheme);
+
+        function learn() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email address?");
+            name = name.trim().;
+            email = email.trim();
+
+            alert("Thank you " + name + ", for your interest in cooking👩‍🍳. We'll be in touch via email.")
+        }
+
+        let learnButton = document.querySelector(".learnCooking");
+        learnButton.addEventListener("click", learn);
+    </script>
+
+</body>
+
+</html>
